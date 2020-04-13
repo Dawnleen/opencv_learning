@@ -7,11 +7,11 @@
 # 安装imutils和opencv-contrib-python库
 
 # 命令行使用：
-# 摄像头  python opencv_object_tracking.py
+# 摄像头  python track_TLD.py
 # 文件    python track_TLD.py --video 目标文件.mp4 --tracker csrt
 
 # 帮助:
-# 选择ROI(region of interest) 。再按 SPACE 或 ENTER ; 用 c 键取消选择; q 键退出
+# s键选择ROI(region of interest), 再按 SPACE 或 ENTER ; 用 c 键取消选择; q 键退出
 
 # 图形处理支持
 from imutils.video import VideoStream
@@ -45,7 +45,7 @@ if int(major) == 3 and int(minor) < 3:
 
 # 否则，我们需要明确调用approrpiate对象跟踪构造函数:
 else:
-    # 初始化一个dictionary that maps strings to their corresponding
+    # 初始化一个dict
     # OpenCV对象跟踪器启用
     OPENCV_OBJECT_TRACKERS = {
         "csrt": cv2.TrackerCSRT_create,
@@ -62,7 +62,7 @@ else:
 
 
 
-# 如果没有提供视频路径，请获取对网络摄像头的引用
+# 如果没有提供视频路径，获取对网络摄像头的引用
 if not args.get("video", False):
     print("[INFO] starting video stream...")
     vs = VideoStream(src=0).start()
