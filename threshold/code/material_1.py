@@ -4,6 +4,7 @@ import cv2 as cv
 import matplotlib.pyplot as plt
 
 img = cv.imread(r"D:/cvpicture/autothers/blackray.jpg",0)
+# framist: 最好使用相对位置
 # img = cv.imread(r"D:/cvpicture/camil.jpg",0)
 
 ret,thre1 = cv.threshold(img,120,200,cv.THRESH_BINARY) 
