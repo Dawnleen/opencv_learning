@@ -23,8 +23,8 @@ matches = sorted(matches,key=lambda x:x.distance)
 #绘制最佳匹配点
 img3 = cv2.drawMatches(img1,kp1,img2,kp2,matches[:10],None,flags=2)
 
-cv2.imshow('img1',img1)
-cv2.imshow('img2',img2)
+# cv2.imshow('img1',img1)
+# cv2.imshow('img2',img2)
 cv2.imshow('img3',img3)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
