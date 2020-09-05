@@ -1,6 +1,6 @@
 import cv2
 #读取图片，以1.png为例
-img=cv2.imread('DATA1.png')
+img=cv2.imread('D:\code\opencv_learning\opencv_learning\last\DATA1.png')
 #检测关键点并计算描述
 sift=cv2.xfeatures2d.SIFT_create()
 #描述符是对关键点的描述，可用于图片匹配

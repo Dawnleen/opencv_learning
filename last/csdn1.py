@@ -4,7 +4,7 @@
 import cv2
 import numpy as np
 
-img_bgr = cv2.imread('DATA1.jpg')   #读取图像
+img_bgr = cv2.imread('D:\code\opencv_learning\opencv_learning\last\DATA1.jpg',0)   #读取图像
 
 cv2.imshow('原始图像', img_bgr)            #显示图像
 cv2.waitKey(0)
